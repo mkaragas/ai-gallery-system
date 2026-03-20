@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Handmade Stained Glass Gallery</title>
+  <style>
+    :root{
+      --ink:#183a59;
+      --soft:#f6f8fb;
+      --line:#d8e2ef;
+      --accent:#c98636;
+      --muted:#5a6b7d;
+      --card:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Georgia, serif;background:var(--soft);color:#202733;line-height:1.45}
+    header{padding:56px 24px 32px;background:linear-gradient(180deg,#edf4fb 0,#f8fbff 100%)}
+    .wrap{max-width:1120px;margin:0 auto}
+    h1{margin:0 0 12px;font-size:42px;color:var(--ink)}
+    .sub{max-width:760px;color:var(--muted);font-size:18px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:start}
+    .hero-card,.chat-card,.grid-card,.note-card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 30px rgba(24,58,89,.06)}
+    .hero-card{padding:28px}
+    .chat-card{padding:22px}
+    .cta{display:inline-block;margin-top:18px;padding:12px 18px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none}
+    main{padding:28px 24px 60px}
+    section{margin-bottom:28px}
+    h2{color:var(--ink);margin:0 0 14px;font-size:28px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .piece{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+    .piece .img{height:220px;background:#dde7f2;display:flex;align-items:center;justify-content:center;color:#5f7387;font-size:14px}
+    .piece .body{padding:16px}
+    .price{font-weight:bold;color:var(--ink)}
+    .tags{margin-top:10px;color:var(--muted);font-size:13px}
+    .note-card{padding:22px}
+    .chat-window{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fbfdff}
+    .bubble{margin:10px 0;padding:12px 14px;border-radius:14px;max-width:92%}
+    .ai{background:#eef4fb}
+    .user{background:#f8efe3;margin-left:auto}
+    .input{margin-top:14px;padding:12px 14px;border:1px solid var(--line);border-radius:999px;color:#7b8795}
+    footer{padding:28px 24px 40px;color:var(--muted)}
+    @media (max-width:900px){
+      .hero,.grid{grid-template-columns:1fr}
+      h1{font-size:34px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap hero">
+    <div class="hero-card">
+      <h1>Handmade Stained Glass Gallery</h1>
+      <div class="sub">
+        One-of-a-kind stained glass suncatchers and small panels. Browse with our gallery assistant,
+        ask for colors or subjects you like, and purchase available pieces with PayPal.
+      </div>
+      <a class="cta" href="#chat">Chat with the Gallery Assistant</a>
+    </div>
+    <div class="chat-card" id="chat">
+      <h2 style="font-size:24px;margin-bottom:12px;">Gallery Assistant</h2>
+      <div class="chat-window">
+        <div class="bubble ai">Welcome to our stained glass gallery. All pieces are handmade and one-of-a-kind. Ask for blue glass, bird designs, pieces under $40, or newest suncatchers.</div>
+        <div class="bubble user">Show me bird designs.</div>
+        <div class="bubble ai">I currently have a Cardinal Panel available for $35. Would you like to see its photo or PayPal checkout link?</div>
+        <div class="input">Your live AI widget goes here (Botpress / Flowise / embedded chat code)</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="grid-card" style="padding:22px;">
+    <h2>Featured Available Pieces</h2>
+    <div class="grid">
+      <article class="piece">
+        <div class="img">Image placeholder — Blue Dragonfly</div>
+        <div class="body">
+          <div><strong>Blue Dragonfly</strong></div>
+          <div class="price">$32</div>
+          <div>5 in • cobalt and clear glass</div>
+          <div class="tags">Tags: blue, dragonfly, nature, window, gift</div>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="img">Image placeholder — Amber Sunburst</div>
+        <div class="body">
+          <div><strong>Amber Sunburst</strong></div>
+          <div class="price">$38</div>
+          <div>6 in • amber and red glass</div>
+          <div class="tags">Tags: amber, sun, southwest, decor, window</div>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="img">Image placeholder — Cardinal Panel</div>
+        <div class="body">
+          <div><strong>Cardinal Panel</strong></div>
+          <div class="price">$35</div>
+          <div>5 × 7 in • bright red glass</div>
+          <div class="tags">Tags: bird, cardinal, red, christmas, gift</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="note-card">
+    <h2>How this site works</h2>
+    <p>Each piece is listed once in your inventory. The AI assistant reads only items marked <strong>Available = Yes</strong>, recommends pieces based on tags, and sends the matching PayPal link when a buyer chooses one.</p>
+    <p><strong>Important:</strong> When an item sells, update its row to <strong>No</strong> so it disappears from recommendations.</p>
+  </section>
+
+  <section class="note-card">
+    <h2>Suggested page sections</h2>
+    <p>Header • Gallery assistant chat • Featured pieces • New arrivals • Under $40 • Bird designs • Window-ready suncatchers • About the artist • Shipping / packaging • Contact</p>
+  </section>
+</main>
+
+<footer class="wrap">
+  Handmade stained glass • one-of-a-kind pieces • PayPal checkout
+</footer>
+</body>
+</html>
